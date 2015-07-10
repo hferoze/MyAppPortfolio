@@ -1,0 +1,88 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@color/activity_background_color"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/mTxtViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Nano Degree Apps!"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:textColor="@color/text_color"/>
+
+    <Button
+        android:id="@+id/mBtnSpotifyStreamer"
+        android:layout_marginTop="30dp"
+        android:layout_width="@dimen/btn_width"
+        android:layout_height="@dimen/btn_height"
+        android:text="SPOTIFY STREAMER"
+        android:layout_below="@+id/mTxtViewTitle"
+        android:layout_centerHorizontal="true"
+        android:background="@color/btn_color_normal"
+        android:textColor="@color/btn_text_color_normal"
+        />
+
+    <Button
+        android:id="@+id/mBtnScoresApp"
+        android:layout_width="@dimen/btn_width"
+        android:layout_height="@dimen/btn_height"
+        android:text="SCORES APP"
+        android:layout_below="@+id/mBtnSpotifyStreamer"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/btn_margin"
+        android:background="@color/btn_color_normal"
+        android:textColor="@color/btn_text_color_normal"/>
+
+    <Button
+        android:id="@+id/mBtnLibraryApp"
+        android:layout_width="@dimen/btn_width"
+        android:layout_height="@dimen/btn_height"
+        android:text="LIBRARY APP"
+        android:layout_below="@+id/mBtnScoresApp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/btn_margin"
+        android:background="@color/btn_color_normal"
+        android:textColor="@color/btn_text_color_normal"/>
+
+    <Button
+        android:id="@+id/mBtnBuildItBigger"
+        android:layout_width="@dimen/btn_width"
+        android:layout_height="@dimen/btn_height"
+        android:text="BUILD IT BIGGER"
+        android:layout_below="@+id/mBtnLibraryApp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/btn_margin"
+        android:background="@color/btn_color_normal"
+        android:textColor="@color/btn_text_color_normal"/>
+
+    <Button
+        android:id="@+id/mBtnXYZReader"
+        android:layout_width="@dimen/btn_width"
+        android:layout_height="@dimen/btn_height"
+        android:text="XYZ READER"
+        android:layout_below="@+id/mBtnBuildItBigger"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/btn_margin"
+        android:background="@color/btn_color_normal"
+        android:textColor="@color/btn_text_color_normal"/>
+
+    <Button
+        android:id="@+id/mBtnCapstoneApp"
+        android:layout_width="@dimen/btn_width"
+        android:layout_height="@dimen/btn_height"
+        android:text="CAPSTONE: MY OWN APP"
+        android:layout_below="@+id/mBtnXYZReader"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/btn_margin"
+        android:background="@color/btn_color_significant"
+        android:textColor="@color/btn_text_color_normal"/>
+
+</RelativeLayout>
