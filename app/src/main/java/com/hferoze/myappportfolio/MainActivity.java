@@ -1,3 +1,7 @@
+/*
+ * Copyright (C) 2015 Hassan Feroze
+ */
+
 package com.hferoze.myappportfolio;
 
 import android.support.v7.app.ActionBarActivity;
@@ -11,7 +15,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-
 
 public class MainActivity extends ActionBarActivity {
 
@@ -27,14 +30,16 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-       mBtnSpotifyStreamer = (Button)findViewById(R.id.mBtnSpotifyStreamer);
-       mBtnScoresApp = (Button)findViewById(R.id.mBtnScoresApp);
-       mBtnLibraryApp = (Button)findViewById(R.id.mBtnLibraryApp);
-       mBtnBuildItBigger =(Button)findViewById(R.id.mBtnBuildItBigger);
-       mBtnXYZReader = (Button)findViewById(R.id.mBtnXYZReader);
-       mBtnCapstoneApp = (Button) findViewById(R.id.mBtnCapstoneApp);
+        //Instantiate All Buttons
+        mBtnSpotifyStreamer = (Button)findViewById(R.id.mBtnSpotifyStreamer);
+        mBtnScoresApp = (Button)findViewById(R.id.mBtnScoresApp);
+        mBtnLibraryApp = (Button)findViewById(R.id.mBtnLibraryApp);
+        mBtnBuildItBigger =(Button)findViewById(R.id.mBtnBuildItBigger);
+        mBtnXYZReader = (Button)findViewById(R.id.mBtnXYZReader);
+        mBtnCapstoneApp = (Button) findViewById(R.id.mBtnCapstoneApp);
 
-       mBtnSpotifyStreamer.setOnClickListener(new View.OnClickListener() {
+        //Implement OnClickListeners for all the buttons
+        mBtnSpotifyStreamer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showToast("This button with launch my "+mBtnSpotifyStreamer.getText() + " app!");
@@ -83,14 +88,22 @@ public class MainActivity extends ActionBarActivity {
 
     }
 
-    public void showToast(CharSequence c)
-    {
+    /**
+     * Shows a toast message with text from character sequence c
+     */
+
+    public void showToast(CharSequence c) {
+        //Inflate a layout
         LayoutInflater inflater = getLayoutInflater();
+
+        //Invoke toast_layout and LinearLayout toast_layout_root
         View layout = inflater.inflate(R.layout.toast_layout, (ViewGroup) findViewById(R.id.toast_layout_root));
 
+        //Invoke TextView toastText
         TextView text = (TextView) layout.findViewById(R.id.toastText);
         text.setText(c);
 
+        //Instantiate toast and show
         Toast toast = new Toast(getApplicationContext());
         toast.setGravity(Gravity.BOTTOM, 0, 30);
         toast.setDuration(Toast.LENGTH_SHORT);
