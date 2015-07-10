@@ -38,7 +38,7 @@ public class MainActivity extends ActionBarActivity {
         mBtnXYZReader = (Button)findViewById(R.id.mBtnXYZReader);
         mBtnCapstoneApp = (Button) findViewById(R.id.mBtnCapstoneApp);
 
-        //Implement OnClickListeners for all the buttons
+        //Implement OnClickListener for all the buttons
         mBtnSpotifyStreamer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
